@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&family=Space+Grotesk:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: black;
+    text-decoration: none;
+}
+
+p, a {
+    font-family: "Intel One Mono", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+html, body {
+    overflow-y: scroll;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width: 100%;
+    height: auto;
+
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+main, section {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    scroll-snap-align: start;
+}
+
+main {
+    flex-direction: column;
+    align-items: center;  
+}
+
+section {
+    flex-direction: row;
+    align-items: center;  
+    justify-content: center;
+}
+
+header {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    
+    position: fixed;
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+#header.hide {
+  transform: translateY(-100%);
+}
+
+main ul  {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin-right: 30px;
+    background-color: rgba(255, 255, 255, 0.733) ;
+    border-radius: 0px 0px 0px 20px;
+}
+
+main li {
+    margin: 30px;
+}
+
+main li a {
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+}
+
+.linha {
+  position: absolute;
+  top: -120px;
+  left: -200px;
+  width: 800px;
+}
+
+.linha path {
+  stroke: #000;
+  stroke-width: 2;
+  fill: none;
+}
+
+.qd {
+  position: absolute;
+  background: #000;
+}
+
+/* quadrado de cima */
+.qd.pequeno1 {
+  width: 80px;
+  height: 80px;
+  top: 20px;
+  left: 220px;
+}
+.qd.pequeno2 {
+  width: 80px;
+  height: 80px;
+  top: 100px;
+  left: 300px;
+}
+
+/* quadrado da direita */
+.qd.grande{
+  width: 160px;
+  height: 160px;
+  top: 100px;
+  left: 60px;
+}
+
+.center-text {
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  
+}
+
+.center-text .title-portfolio {
+    filter: opacity(0.8);
+    text-shadow: none;
+    font-size: 25px;
+
+    width: 100%;
+    padding-left: 6%;
+    
+}
+
+.center-text h1 {
+    display: flex;
+    flex-direction: column;
+    
+    width: fit-content;
+
+    font-size: 200px;
+    user-select: none;
+    line-height: 0.8;
+}
+
+.center-text span {
+    user-select: none;
+    width: fit-content;
+    transform: scale(1.2, 1);
+    font-size: 200px;
+    line-height: 150px;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: bold;
+    letter-spacing: -5px;
+}
+
+.center-text p {
+    margin-top: 5px;
+}
+
+.center-text a {
+    margin-top: 4%;
+    background-color: black;
+    padding: 18px;
+    color: white;
+    padding-left: 80px;
+    padding-right: 80px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+#habilidades {
+    overflow: hidden;
+    flex-direction: column;
+    align-items: end;
+}
+
+#habilidades .row {
+    width: 90%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+}
+
+#habilidades .row div {
+    width: 40%;
+    display: flex;
+}
+
+#habilidades .row .text {
+    flex-direction: column;
+    justify-content: start;
+    width: 50%;
+    padding-top: 12%;
+}
+
+#habilidades .row .text h1 {
+    font-size: 60px;
+    margin-bottom: 35px;
+}
+
+#habilidades .row .list {
+    justify-content: center;
+}
+
+#habilidades svg {
+    width: 500px;
+}
+
+#habilidades i {
+    width: fit-content;
+    text-align: start;
+    font-size: 550px;
+    line-height: 400px;
+}
+
+#habilidades .list {
+    width: 100%;
+    display: flex;
+    position: relative;
+    margin-right: 20%;
+}
+
+#habilidades ul {
+    width: 100%;
+    max-height: 700px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+
+    transform: rotate(15deg) translate(80px, -60px);
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+
+    cursor: grab;
+}
+
+#habilidades ul:active {
+    cursor: grabbing;
+}
+
+#habilidades ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0 50px 0 ;
+
+    scroll-snap-align: center;
+}
+
+#habilidades ul li h1 {
+    font-size: 70px;
+    margin-bottom: 30px;
+}
+
+#habilidades ul li .fa-php {
+    margin: 15px 0 15px 0;
+}
+
+#habilidades ul::-webkit-scrollbar {
+    width: 3px;
+}
+
+#habilidades ul::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.4);
+}
+
